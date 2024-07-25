@@ -42,10 +42,23 @@
   justify-content: center;
 }
 
+.weather_title {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1;
+  margin: 20px 0;
+}
+
 .weather-icon {
   width: 250px;
   height: 190px;
   margin: 30px 0;
+}
+
+.detail {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 .temperature {

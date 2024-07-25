@@ -52,6 +52,7 @@ const Weather = () => {
         humidity: data.main.humidity,
         windSpeed: data.wind.speed,
         icon: icon,
+        weather_title: data.weather[0].main,
       });
     } catch (error) {
       setWeatherData(false);
@@ -79,7 +80,10 @@ const Weather = () => {
           <div className="weather-info">
             <img src={weatherData.icon} alt="" className="weather-icon" />
             <p className="temperature">{weatherData.temperature}°C</p>
-            <p className="location">{weatherData.location}</p>
+            <div className="detail">
+              <p className="location">{weatherData.location}</p>
+              <p className="weather_title">{weatherData.weather_title}</p>
+            </div>
           </div>
 
           <div className="weather-data">
